@@ -20,43 +20,65 @@
     <main>
       <section>
         <form>
-          <div>
-            <label for="day">Day</label>
-            <input type="text" name="day" id="day" placeholder="DD" value="1" />
-          </div>
+          <input
+            type="text"
+            id="year"
+            oninput="inputYearCheck()"
+            maxlength="4"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');"
+          />
 
-          <div>
-            <label for="month">Month</label>
-            <input
-              type="text"
-              name="month"
-              id="month"
-              placeholder="MM"
-              value="7"
-            />
-          </div>
+          <select name="months" id="months" onchange="howManyDays()" disabled>
+            <option value="January">January</option>
+            <option value="February">February</option>
+            <option value="March">March</option>
+            <option value="April">April</option>
+            <option value="May">May</option>
+            <option value="June">June</option>
+            <option value="July">July</option>
+            <option value="August">August</option>
+            <option value="September">September</option>
+            <option value="October">October</option>
+            <option value="November">November</option>
+            <option value="December">December</option>
+          </select>
 
-          <div>
-            <label for="year">Year</label>
-            <input
-              type="text"
-              name="year"
-              id="year"
-              placeholder="YYYY"
-              value="2000"
-            />
-          </div>
+          <select name="days" id="days" disabled>
+            <option value="01">01</option>
+            <option value="02">02</option>
+            <option value="03">03</option>
+            <option value="04">04</option>
+            <option value="05">05</option>
+            <option value="06">06</option>
+            <option value="07">07</option>
+            <option value="08">08</option>
+            <option value="09">09</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+            <option value="17">17</option>
+            <option value="18">18</option>
+            <option value="19">19</option>
+            <option value="20">20</option>
+            <option value="21">21</option>
+            <option value="22">22</option>
+            <option value="23">23</option>
+            <option value="24">24</option>
+            <option value="25">25</option>
+            <option value="26">26</option>
+            <option value="27">27</option>
+            <option value="28">28</option>
+            <option value="29">29</option>
+            <option value="30">30</option>
+            <option value="31">31</option>
+          </select>
 
           <button id="btn">submit</button>
         </form>
-      </section>
-
-      <section>
-        <span><span id="year-result">- -</span>years</span>
-        <br />
-        <span><span id="month-result">- -</span>months</span>
-        <br />
-        <span><span id="day-result">- -</span>days</span>
       </section>
     </main>
   </body>

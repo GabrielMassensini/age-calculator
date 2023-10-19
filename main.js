@@ -3,24 +3,43 @@ const CURRENT_YEAR = CURRENT_DATE.getFullYear();
 const CURRENT_MONTH = CURRENT_DATE.getMonth() + 1;
 const CURRENT_DAY = CURRENT_DATE.getDate();
 
-const YEAR_OF_BIRTH = document.getElementById("year").value;
-const MONTH_OF_BIRTH = document.getElementById("month").value;
-const DAY_OF_BIRTH = document.getElementById("day").value;
+const YEAR_OF_BIRTH = document.getElementById("year");
+const MONTH_OF_BIRTH = document.getElementById("months");
+const DAYS_OF_BIRTH = document.getElementById("days");
 
-const YEARS_OF_LIVE = CURRENT_YEAR - YEAR_OF_BIRTH;
-const MONTHS_OF_LIVE = CURRENT_MONTH - MONTH_OF_BIRTH;
-const DAYS_OF_LIVE = CURRENT_DAY - DAY_OF_BIRTH - 1;
+function inputYearCheck() {
+  if (MONTH_OF_BIRTH.value !== "") {
+    MONTH_OF_BIRTH.removeAttribute("disabled");
+    DAYS_OF_BIRTH.removeAttribute("disabled");
+  }
+}
 
-const YEARS_RESULT = document.getElementById("year-result");
-const MONTH_RESULT = document.getElementById("month-result");
-const DAY_RESULT = document.getElementById("day-result");
+function howManyDays() {
+  const SELECTED_MONTH = MONTH_OF_BIRTH.value;
 
-const btn = document.getElementById("btn");
+  let maxDays = 31;
 
-btn.addEventListener("click", (e) => {
-  e.preventDefault();
-  
-  YEARS_RESULT.innerHTML = YEARS_OF_LIVE;
-  MONTH_RESULT.innerHTML = MONTHS_OF_LIVE;
-  DAY_RESULT.innerHTML = DAYS_OF_LIVE;
-});
+  switch (SELECTED_MONTH) {
+    case "April":
+    case "June":
+    case "September":
+    case "November":
+      maxDays = 30;
+      break;
+    case "February":
+      maxDays =
+        YEAR_OF_BIRTH.value % 4 === 0 &&
+        (YEAR_OF_BIRTH.value % 100 !== 0 || YEAR_OF_BIRTH.value % 400 === 0)
+          ? 29
+          : 28;
+      break;
+  }
+
+  for (let i = 1; i <= maxDays; i++) {
+    const OPTION = document.createElement("option");
+    const day = i.toString().padStart(2, "0");
+    OPTION.value = day;
+    OPTION.text = day;
+    DAYS_OF_BIRTH.appendChild(OPTION);
+  }
+}
