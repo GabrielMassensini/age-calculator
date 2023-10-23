@@ -32,7 +32,7 @@ To use the Age Calculator App, follow these steps:
     <img src="./img/age-calculator.png" alt="Age calculator image">
 </div>
 
-You can access the live version of the Age Calculator App <a href="https://gabrielmassensini.github.io/age-calculator/" target="_blank">HERE</a>.
+You can access the live version of the Age Calculator App <a href="https://gabrielmassensini.github.io/age-calculator/" target="_blank">HERE</a>
 
 ## Features
 
