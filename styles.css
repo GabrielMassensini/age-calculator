@@ -1,0 +1,85 @@
+/* Estilizando o corpo da página */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilizando o elemento principal (main) */
+main {
+  max-width: 800px;
+  margin: 10% auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilizando as seções */
+section {
+  margin-bottom: 20px;
+}
+
+/* Estilizando o formulário */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+input,
+select,
+button {
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+select,
+button {
+  cursor: pointer;
+}
+
+/* Estilizando a tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #f2f2f2;
+  font-weight: bold;
+}
+
+/* Estilizando os resultados */
+#your-birth {
+  font-weight: bold;
+}
+
+#your-age {
+  font-weight: bold;
+  color: #0077b6;
+}
+
+/* Estilizando o botão */
+#btn {
+  background-color: #0077b6;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#btn:hover {
+  background-color: #00597d;
+}
