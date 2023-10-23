@@ -1,27 +1,49 @@
-/* Estilizando o corpo da página */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f4;
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  outline: none;
 }
 
-/* Estilizando o elemento principal (main) */
-main {
-  max-width: 800px;
-  margin: 10% auto;
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 55px;
+  background-color: #fcfdff;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  color: #6897eb;
+}
+
+.title-container i {
+  font-size: 25px;
+}
+
+header p {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #1c507b;
+}
+
+/*FORM STYLES*/
+
+.form-section {
+  background-color: #6897eb;
+  color: #fff;
   padding: 20px;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  margin-top: 25px;
+  border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilizando as seções */
-section {
-  margin-bottom: 20px;
-}
-
-/* Estilizando o formulário */
 form {
   display: flex;
   flex-wrap: wrap;
@@ -42,36 +64,6 @@ button {
   cursor: pointer;
 }
 
-/* Estilizando a tabela */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 10px;
-}
-
-th,
-td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ccc;
-}
-
-th {
-  background-color: #f2f2f2;
-  font-weight: bold;
-}
-
-/* Estilizando os resultados */
-#your-birth {
-  font-weight: bold;
-}
-
-#your-age {
-  font-weight: bold;
-  color: #0077b6;
-}
-
-/* Estilizando o botão */
 #btn {
   background-color: #0077b6;
   color: #fff;
@@ -82,4 +74,39 @@ th {
 
 #btn:hover {
   background-color: #00597d;
+}
+
+/*RESULT STYLES*/
+
+.result-section {
+  background-color: #6897eb; /* Cor principal */
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  display: none;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ccc;
+}
+
+th {
+  background-color: #0077b6;
+  color: #fff;
+  font-weight: bold;
+}
+
+td {
+  background-color: #00597d;
+  color: #fff;
 }
